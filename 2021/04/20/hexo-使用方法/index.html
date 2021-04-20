@@ -8,22 +8,22 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>hexo 使用方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载并安装 nodehttp:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F; 查看版本node -v    查看node版本npm -v    查看npm版本 安装淘宝的 cnpm 管理器npm install -g cnpm –registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.orgcnpm -v    查看cnpm版本 安装hexo框架cnpm install -g hexo">
+  <meta name="description" content="下载并安装 nodehttp:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo 使用方法">
 <meta property="og:url" content="http://example.com/2021/04/20/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="下载并安装 nodehttp:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F; 查看版本node -v    查看node版本npm -v    查看npm版本 安装淘宝的 cnpm 管理器npm install -g cnpm –registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.orgcnpm -v    查看cnpm版本 安装hexo框架cnpm install -g hexo">
+<meta property="og:description" content="下载并安装 nodehttp:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-20T03:52:03.000Z">
-<meta property="article:modified_time" content="2021-04-20T04:37:16.754Z">
+<meta property="article:modified_time" content="2021-04-20T06:10:23.258Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/img/icon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -43,7 +43,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #DDA0DD"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -59,8 +59,6 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
-	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -69,8 +67,6 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -83,22 +79,69 @@
 				
 					<a class="github" target="_blank" href="https://github.com/zfl837244202" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/837244202/" title="qq"><i class="icon-qq"></i></a>
-		        
-					<a class="weixin" target="_blank" href="/zfl837244202/" title="weixin"><i class="icon-weixin"></i></a>
-		        
-					<a class="mail" target="_blank" href="/837244202@qq.com/" title="mail"><i class="icon-mail"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
 </div>
 
+
+
+
+
+<div style="position: absolute; bottom: 100px; left: 0px; width: 50%">
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=86 
+		src="//music.163.com/outchain/player?type=2&id=1365914380&auto=1&height=66">
+	</iframe>
+
+	<div id="binft" style="position: absolute;  left: 35%; width: 50%; width:200px"> </div>
+  <script>
+    var binft = function (r) {
+      function t() {
+        return b[Math.floor(Math.random() * b.length)]
+      }  
+      function e() {
+        return String.fromCharCode(94 * Math.random() + 33)
+      }
+      function n(r) {
+        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+          var l = document.createElement("span");
+          l.textContent = e(), l.style.color = t(), n.appendChild(l)
+        }
+        return n
+      }
+      function i() {
+        var t = o[c.skillI];
+        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+      }
+      var l = "",
+      o = ["今までよく頑張ったよね，坚持到现在真不容易","ここらで休んでみませんか，就在这里稍事休息吧"].map(function (r) {
+      return r + ""
+      }),
+      a = 2,
+      g = 1,
+      s = 5,
+      d = 75,
+      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+      c = {
+        text: "",
+        prefixP: -s,
+        skillI: 0,
+        skillP: 0,
+        direction: "forward",
+        delay: a,
+        step: g
+      };
+      i()
+      };
+      binft(document.getElementById('binft'));
+  </script>
+
+</div>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #DDA0DD"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -115,20 +158,12 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/zfl837244202" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="qq" target="_blank" href="/837244202/" title="qq"><i class="icon-qq"></i></a>
-			        
-						<a class="weixin" target="_blank" href="/zfl837244202/" title="weixin"><i class="icon-weixin"></i></a>
-			        
-						<a class="mail" target="_blank" href="/837244202@qq.com/" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -137,9 +172,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -175,10 +208,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="下载并安装-node"><a href="#下载并安装-node" class="headerlink" title="下载并安装 node"></a>下载并安装 node</h1><p><a target="_blank" rel="noopener" href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
+<span id="more"></span>
 <h1 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h1><p>node -v    查看node版本<br>npm -v    查看npm版本</p>
 <h1 id="安装淘宝的-cnpm-管理器"><a href="#安装淘宝的-cnpm-管理器" class="headerlink" title="安装淘宝的 cnpm 管理器"></a>安装淘宝的 cnpm 管理器</h1><p>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a><br>cnpm -v    查看cnpm版本</p>
 <h1 id="安装hexo框架"><a href="#安装hexo框架" class="headerlink" title="安装hexo框架"></a>安装hexo框架</h1><p>cnpm install -g hexo-cli<br>hexo -v    查看hexo版本<br>mkdir blog    创建blog目录<br>cd blog     进入blog目录</p>
-<span id="more"></span>
 <h1 id="生成博客-初始化博客"><a href="#生成博客-初始化博客" class="headerlink" title="生成博客 初始化博客"></a>生成博客 初始化博客</h1><p>sudo hexo init<br>hexo s    启动本地博客服务<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>    本地访问地址<br>hexo n “我的第一篇文章” 创建新的文章<br>hexo clean 清理<br>hexo g 生成</p>
 <h1 id="Github创建一个新的仓库"><a href="#Github创建一个新的仓库" class="headerlink" title="Github创建一个新的仓库"></a>Github创建一个新的仓库</h1><p>YourGithubName.github.io<br>cnpm install –save hexo-deployer-git  在blog目录下安装git部署插件</p>
 <h1 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h1><hr>
@@ -241,57 +274,6 @@ theme: yilia
       
 
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/20/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -299,6 +281,15 @@ theme: yilia
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/04/20/hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo 加点特效
+        
+      </div>
+    </a>
   
   
     <a href="/2021/04/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -327,6 +318,26 @@ theme: yilia
 
 
 
+  
+      <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81MzMwOC8yOTc4Mg==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+      
   
   
   
@@ -366,7 +377,7 @@ theme: yilia
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -386,8 +397,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -399,15 +408,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -471,43 +478,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">每天进步一点点，加油！</div>
   	  	
     	</section>
     
@@ -582,10 +557,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 </div>
   </div>
 
-  <!-- 《页面点击小红心 -->
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
 
-  <script type="text/javascript" src="/js/love.js"></script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/snow.js"></script>
 
-<!-- 页面点击小红心》 -->
+<!--浏览器搞笑标题-->
+<!-- <script type="text/javascript" src="/js/funnytitle.js"></script> -->
+
+<!-- live 2d -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script> -->
 </body>
 </html>
