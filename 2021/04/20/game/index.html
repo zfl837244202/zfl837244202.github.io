@@ -423,18 +423,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/04/20/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/20/hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hexo 使用方法
+          Hexo 加点特效
         
       </div>
     </a>
   
   
-    <a href="/2021/04/20/%E7%AC%94%E8%AE%B0-JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">笔记-JAVA编程思想</div>
+    <a href="/2021/04/20/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo 使用方法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -523,7 +523,7 @@
 			</span> | -->
 
 			<i class="fas fa-chart-area"></i>
-			<span class="post-count">字数统计 1k</span> |
+			<span class="post-count">字数统计 1.1k</span> |
 
 			<!-- # 总访问量 -->
 			<span id="busuanzi_container_site_pv">    
@@ -630,15 +630,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">game</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">个人</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -646,11 +642,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">postgresql</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">个人</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">postgresql</a>
               </li>
             
             <div class="clearfix"></div>
@@ -777,10 +777,25 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
   </div>
 
 <!-- 页面点击小红心 -->
+{% if theme.love.enable %}
 <script type="text/javascript" src="/js/love.js"></script>
+{% endif %}
 
 <!-- 雪花特效 -->
 <script type="text/javascript" src="/js/snow.js"></script>
+
+<!-- 樱花特效 -->
+{% if theme.sakura.enable %}
+<script async src="/js/fairyDustCursor.js"></script>
+{% endif %}
+
+<!-- 烟花点击 -->
+<!-- <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+ -->
+
+
 
 <!--浏览器搞笑标题-->
 <!-- <script type="text/javascript" src="/js/funnytitle.js"></script> -->
