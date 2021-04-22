@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>笔记-hexo-一些坑 | 良辰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Github+Hexo博客增添相册功能 路径设置问题">
+  <meta name="description" content="Github+Hexo博客增添相册功能 路径设置问题 1.在index.md 中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记-hexo-一些坑">
 <meta property="og:url" content="http://example.com/2021/04/21/%E7%AC%94%E8%AE%B0-hexo-%E4%B8%80%E4%BA%9B%E5%9D%91/index.html">
 <meta property="og:site_name" content="良辰">
-<meta property="og:description" content="Github+Hexo博客增添相册功能 路径设置问题">
+<meta property="og:description" content="Github+Hexo博客增添相册功能 路径设置问题 1.在index.md 中">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-04-21T14:55:54.000Z">
-<meta property="article:modified_time" content="2021-04-22T03:08:11.074Z">
+<meta property="article:modified_time" content="2021-04-22T03:23:55.018Z">
 <meta property="article:author" content="by zfl">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -359,7 +359,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">175字</span>
+        <span class="post-count">181字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -391,20 +391,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p> <a target="_blank" rel="noopener" href="https://cungudafa.blog.csdn.net/article/details/104378416?utm_medium=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-7.control&dist_request_id=1332024.7936.16189865500844023&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-7.control">Github+Hexo博客增添相册功能</a> 路径设置问题</p>
+<p>1.在index.md 中</p>
 <span id="more"></span> 
-
-<p>index.md 下</p>
 <hr>
 <pre><code>&lt;div class=&quot;instagram itemscope&quot;&gt;
     &lt;a href=&quot;https://github.com/zfl837244202/blog_photos/master/photos&quot; target=&quot;_blank&quot; class=&quot;open-ins&quot;&gt;图片正在加载中…&lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
 <hr>
-<p>tools.py 下<br>这里可以直接修改到你的hexo资源目录 </p>
+<p>2.在tools.py 中<br>这里可以直接修改到你的hexo资源目录 </p>
 <h3 id="重点，一定要设置正确的目录不然读取不到图片"><a href="#重点，一定要设置正确的目录不然读取不到图片" class="headerlink" title="重点，一定要设置正确的目录不然读取不到图片"></a>重点，一定要设置正确的目录不然读取不到图片</h3><pre><code>with open(&quot;/Users/zfl/blog/source/photos/data.json&quot;,&quot;w&quot;) as fp:json.dump(final_dict, fp)
 </code></pre>
 <hr>
-<p>ins.js 下<br>需要修改raw.githubusercontent.com/你的github名/你的github仓库名/master/min_photos/即可</p>
+<p>3.在ins.js 中<br>需要修改raw.githubusercontent.com/你的github名/你的github仓库名/master/min_photos/即可</p>
 <hr>
 <pre><code>var minSrc = &#39;https://raw.githubusercontent.com/zfl837244202/blog_photos/master/min_photos/&#39; + data.link[i];
 var src = &#39;https://raw.githubusercontent.com/zfl837244202/blog_photos/master/photos/&#39; + data.link[i];
@@ -657,11 +656,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color5">psql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">psql</a>
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
