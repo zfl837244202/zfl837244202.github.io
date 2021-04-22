@@ -67,7 +67,7 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
-        <li><p> TOTAL: 12</p></li>
+        <li><p> TOTAL: 13</p></li>
 			</ul> 
 		</nav>
     
@@ -184,7 +184,7 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
-        <li><p> TOTAL: 12</p></li>
+        <li><p> TOTAL: 13</p></li>
 			</ul> 
 		</nav>
     
@@ -339,6 +339,110 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Hexo-一键操作脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/22/Hexo-%E4%B8%80%E9%94%AE%E6%93%8D%E4%BD%9C%E8%84%9A%E6%9C%AC/">Hexo-一键操作脚本</a>
+    </h1>
+  
+
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">192字</span>
+      </span>
+    </span>
+    &nbsp; | &nbsp;
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
+<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
+</div>
+
+
+          
+        
+        <a href="/2021/04/22/Hexo-%E4%B8%80%E9%94%AE%E6%93%8D%E4%BD%9C%E8%84%9A%E6%9C%AC/" class="archive-article-date">
+  	<time datetime="2021-04-22T14:20:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-22</time>
+</a>
+<!-- <span id="busuanzi_container_page_pv">  
+	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
+</span> -->
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-一键创建文章并在vs-code中打开"><a href="#1-一键创建文章并在vs-code中打开" class="headerlink" title="1. 一键创建文章并在vs code中打开"></a>1. 一键创建文章并在vs code中打开</h2><p>任意位置创建shell脚本<br><strong>注意路径不要写错</strong><br>create.sh</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;Users&#x2F;zfl&#x2F;blog</span><br><span class="line">read -p &quot;请输入文章名：&quot; name</span><br><span class="line">hexo n &quot;$name&quot;</span><br><span class="line">open &#x2F;Applications&#x2F;Visual\ Studio\ Code.app&#x2F; &#x2F;Users&#x2F;zfl&#x2F;blog&#x2F;source&#x2F;_posts&#x2F;$name.md</span><br><span class="line">rm -rf &#x2F;Users&#x2F;zfl&#x2F;blog&#x2F;source&#x2F;_posts&#x2F;$name</span><br></pre></td></tr></table></figure>
+<p>我这里把一并创建的文件夹删除了</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/22/Hexo-%E4%B8%80%E9%94%AE%E6%93%8D%E4%BD%9C%E8%84%9A%E6%9C%AC/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MacOs-Github-Ssh配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -356,7 +460,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">249字</span>
+        <span class="post-count">253字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -388,12 +492,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>1. 列出已存在的SSH Key</strong><br><code>ls -al ~/.ssh</code><br>如下所示，我的已有id_rsa.pub文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">total 16</span><br><span class="line">drwx------   4 root  wheel   128  4 21 15:46 .</span><br><span class="line">drwxr-x---  16 root  wheel   512  4 22 20:53 ..</span><br><span class="line">-rw-------   1 root  wheel  2602  4 21 15:46 id_rsa</span><br><span class="line">-rw-r--r--   1 root  wheel   570  4 21 15:46 id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p><strong>2. 生成密钥</strong><br><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code><br>如下所示,我选择覆盖 <code>Overwrite (y/n)? y</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;var&#x2F;root&#x2F;.ssh&#x2F;id_rsa): </span><br><span class="line">&#x2F;var&#x2F;root&#x2F;.ssh&#x2F;id_rsa already exists.</span><br><span class="line">Overwrite (y&#x2F;n)? y</span><br><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br><span class="line">Your identification has been saved in &#x2F;var&#x2F;root&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;var&#x2F;root&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:******B&#x2F;dQCl**********w7I4RfRVL******&#x2F;ssK8w ******@**.com</span><br></pre></td></tr></table></figure>
-<p><strong>3. 查找SSH Key</strong><br><code>vi /var/root/.ssh/id_rsa.pub </code><br>将里面的内容复制下来<br><strong>4. 将SSH Key添加到Github中</strong><br>打开 <a target="_blank" rel="noopener" href="https://github.com/settings/ssh">https://github.com/settings/ssh</a> 将这个key添加到github网站<br><strong>5. 测试</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sh-3.2# ssh -T git@github.com</span><br><span class="line">Hi *****! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-
+        
       
 
       
@@ -1215,7 +1314,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <span id="more"></span>
-<p>QQ:837244202<br>Mail:<a href="mailto:&#56;&#x33;&#55;&#x32;&#x34;&#52;&#x32;&#x30;&#50;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;">&#56;&#x33;&#55;&#x32;&#x34;&#52;&#x32;&#x30;&#50;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;</a><br>WeChat:zfl837244202<br><a target="_blank" rel="noopener" href="https://i.loli.net/2021/04/20/EN5gW7j1XUzAlLf.jpg">我是图片</a></p>
+<p>QQ:837244202<br>Mail:<a href="mailto:&#x38;&#51;&#x37;&#50;&#52;&#x34;&#50;&#48;&#50;&#64;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x38;&#51;&#x37;&#50;&#52;&#x34;&#50;&#48;&#50;&#64;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;</a><br>WeChat:zfl837244202<br><a target="_blank" rel="noopener" href="https://i.loli.net/2021/04/20/EN5gW7j1XUzAlLf.jpg">我是图片</a></p>
 
       
 
@@ -1240,109 +1339,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/20/%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo-加点特效" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/20/Hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/">Hexo 加点特效</a>
-    </h1>
-  
-
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">76字</span>
-      </span>
-    </span>
-    &nbsp; | &nbsp;
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
-<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
-</div>
-
-
-          
-        
-        <a href="/2021/04/20/Hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/" class="archive-article-date">
-  	<time datetime="2021-04-20T06:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
-</a>
-<!-- <span id="busuanzi_container_page_pv">  
-	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
-</span> -->
-
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-Hexo-博客优化之博客美化系列（持续更新）"><a href="#1-Hexo-博客优化之博客美化系列（持续更新）" class="headerlink" title="1.Hexo 博客优化之博客美化系列（持续更新）"></a>1.Hexo 博客优化之博客美化系列（持续更新）</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/85420403">点我跳转</a></p>
-<h2 id="2-Hexo-博客优化之实用功能添加系列（持续更新）"><a href="#2-Hexo-博客优化之实用功能添加系列（持续更新）" class="headerlink" title="2.Hexo 博客优化之实用功能添加系列（持续更新）"></a>2.Hexo 博客优化之实用功能添加系列（持续更新）</h2><p><a target="_blank" rel="noopener" href="https://itrhx.blog.csdn.net/article/details/85010191?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&dist_request_id=1331996.9100.16188964458790311&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">点我跳转</a></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/20/Hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/">阅读全文 >></a>
         </p>
       
 
@@ -1399,7 +1395,7 @@
 			</span> | -->
 
 			<i class="fas fa-chart-area"></i>
-			<span class="post-count">字数统计 1.9k</span> |
+			<span class="post-count">字数统计 2.1k</span> |
 
 			<!-- # 总访问量 -->
 			<span id="busuanzi_container_site_pv">    
@@ -1514,10 +1510,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">shell</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
@@ -1526,7 +1518,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">问题</a>
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1542,7 +1538,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color3">问题</a>
               </li>
             
             <div class="clearfix"></div>
