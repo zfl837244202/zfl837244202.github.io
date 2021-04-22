@@ -11,12 +11,12 @@
   <meta name="description" content="1.安装postgresql以及pgadmin4访达文件夹搜索 shift+command+gbrew目录  &#x2F;otp&#x2F;homebrew终端 brew安装postgresql：brew install postgresql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MacOs-Postgresql及Pgadmin4安装方法">
-<meta property="og:url" content="http://example.com/2021/04/20/macos-postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:url" content="http://example.com/2021/04/20/MacOs-Postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="良辰">
 <meta property="og:description" content="1.安装postgresql以及pgadmin4访达文件夹搜索 shift+command+gbrew目录  &#x2F;otp&#x2F;homebrew终端 brew安装postgresql：brew install postgresql">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-04-20T13:30:24.000Z">
-<meta property="article:modified_time" content="2021-04-22T03:11:50.793Z">
+<meta property="article:modified_time" content="2021-04-22T12:17:42.175Z">
 <meta property="article:author" content="by zfl">
 <meta property="article:tag" content="psql">
 <meta name="twitter:card" content="summary">
@@ -72,7 +72,7 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
-        <li><p> TOTAL: 10</p></li>
+        <li><p> TOTAL: 12</p></li>
 			</ul> 
 		</nav>
     
@@ -189,7 +189,7 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
-        <li><p> TOTAL: 10</p></li>
+        <li><p> TOTAL: 12</p></li>
 			</ul> 
 		</nav>
     
@@ -342,7 +342,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-macos-postgresql及pgadmin4安装方法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MacOs-Postgresql及pgadmin4安装方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -359,7 +359,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">242字</span>
+        <span class="post-count">252字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -377,7 +377,7 @@
 
           
         
-        <a href="/2021/04/20/macos-postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="archive-article-date">
+        <a href="/2021/04/20/MacOs-Postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="archive-article-date">
   	<time datetime="2021-04-20T13:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
@@ -390,24 +390,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-安装postgresql以及pgadmin4"><a href="#1-安装postgresql以及pgadmin4" class="headerlink" title="1.安装postgresql以及pgadmin4"></a>1.安装postgresql以及pgadmin4</h2><p>访达文件夹搜索 shift+command+g<br>brew目录  /otp/homebrew<br>终端 brew安装postgresql：brew install postgresql</p>
+        <h2 id="1-安装postgresql以及pgadmin4"><a href="#1-安装postgresql以及pgadmin4" class="headerlink" title="1.安装postgresql以及pgadmin4"></a>1.安装postgresql以及pgadmin4</h2><p>访达文件夹搜索 shift+command+g<br>brew目录  /otp/homebrew<br>终端 brew安装postgresql：<code>brew install postgresql</code></p>
 <span id="more"></span>
-<h2 id="2-初始化数据库"><a href="#2-初始化数据库" class="headerlink" title="2.初始化数据库"></a>2.初始化数据库</h2><p>cd到目录下：cd /opt/homebrew/Cellar/postgresql/13.2_1/bin<br>初始化数据库：initdb /usr/local/var/postgres -E utf8<br>创建用户：createuser username -P<br>创建数据库：createdb dbname -O username -E UTF8 -e<br>查看数据库：/opt/homebrew/Cellar/postgresql/13.2_1/bin/psql</p>
-<h2 id="3-postgresql服务启动（brew）"><a href="#3-postgresql服务启动（brew）" class="headerlink" title="3.postgresql服务启动（brew）"></a>3.postgresql服务启动（brew）</h2><p>服务启动（brew）:brew services start postgresql<br>服务关闭（brew）:brew services stop postgresql   </p>
-<hr>
-<pre><code>zfl@localhost ~ % brew services stop postgresql   
-Stopping `postgresql`... (might take a while)
-==&gt; Successfully stopped `postgresql` (label: homebrew.mxcl.postgresql)
-zfl@localhost ~ % brew services start postgresql
-==&gt; Successfully started `postgresql` (label: homebrew.mxcl.postgresql)
-</code></pre>
-<hr>
+<h2 id="2-初始化数据库"><a href="#2-初始化数据库" class="headerlink" title="2.初始化数据库"></a>2.初始化数据库</h2><p>cd到目录下：<code>cd /opt/homebrew/Cellar/postgresql/13.2_1/bin</code><br>初始化数据库：<code>initdb /usr/local/var/postgres -E utf8</code><br>创建用户：<code>createuser username -P</code><br>创建数据库：<code>createdb dbname -O username -E UTF8 -e</code><br>查看数据库：<code>/opt/homebrew/Cellar/postgresql/13.2_1/bin/psql</code></p>
+<h2 id="3-postgresql服务启动（brew）"><a href="#3-postgresql服务启动（brew）" class="headerlink" title="3.postgresql服务启动（brew）"></a>3.postgresql服务启动（brew）</h2><p>服务启动（brew）:<code>brew services start postgresql</code><br>服务关闭（brew）:<code>brew services stop postgresql</code>   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zfl@localhost ~ % brew services stop postgresql   </span><br><span class="line">Stopping &#96;postgresql&#96;... (might take a while)&#x3D;&#x3D;&gt; Successfully stopped &#96;postgresql&#96; (label: homebrew.mxcl.postgresql)</span><br><span class="line">zfl@localhost ~ % brew services start postgresql&#x3D;&#x3D;&gt; Successfully started &#96;postgresql&#96; (label: homebrew.mxcl.postgresql)</span><br></pre></td></tr></table></figure>
+
 <h2 id="4-下载pgadmin4-安装"><a href="#4-下载pgadmin4-安装" class="headerlink" title="4.下载pgadmin4 安装"></a>4.下载pgadmin4 安装</h2><p>在postgresql安装完毕后，为了pgadmin能够远程连接，需要配置如下：<br>1.修改数据库中文件 pg_hba.conf 文件， 将 客户端机器IP添加进去，示例如下：</p>
-<hr>
-<pre><code># TYPE   DATABASE        USER            ADDRESS                 METHOD
-host      all               all           10.0.2.2/32                trust
+<pre><code># TYPE   DATABASE    USER     ADDRESS        METHOD    
+  host     all       all    10.0.2.2/32      trust
 </code></pre>
-<hr>
 <p>2.修改postgresql.conf 配置 listen_addresses=’*’<br>需要重启postgresql服务，使修改生效。</p>
 
       
@@ -441,7 +433,7 @@ host      all               all           10.0.2.2/32  
   
 <nav id="article-nav">
   
-    <a href="/2021/04/21/game/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/21/Game/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -451,7 +443,7 @@ host      all               all           10.0.2.2/32  
     </a>
   
   
-    <a href="/2021/04/20/macos-tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/04/20/MacOs-Tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">MacOs-Tomcat安装方法</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -541,7 +533,7 @@ host      all               all           10.0.2.2/32  
 			</span> | -->
 
 			<i class="fas fa-chart-area"></i>
-			<span class="post-count">字数统计 1.3k</span> |
+			<span class="post-count">字数统计 1.9k</span> |
 
 			<!-- # 总访问量 -->
 			<span id="busuanzi_container_site_pv">    
@@ -656,11 +648,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">psql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color3">问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,11 +668,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">macos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">个人</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">问题</a>
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
             
             <div class="clearfix"></div>

@@ -67,7 +67,7 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
-        <li><p> TOTAL: 10</p></li>
+        <li><p> TOTAL: 12</p></li>
 			</ul> 
 		</nav>
     
@@ -184,7 +184,7 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
-        <li><p> TOTAL: 10</p></li>
+        <li><p> TOTAL: 12</p></li>
 			</ul> 
 		</nav>
     
@@ -339,14 +339,14 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-问题-hexo-相册问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MacOs-Github-Ssh配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/22/%E9%97%AE%E9%A2%98-hexo-%E7%9B%B8%E5%86%8C%E9%97%AE%E9%A2%98/">问题-hexo-相册问题</a>
+      <a class="article-title" href="/2021/04/22/MacOs-Github-Ssh%E9%85%8D%E7%BD%AE/">MacOs-Github-Ssh配置</a>
     </h1>
   
 
@@ -356,7 +356,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">53字</span>
+        <span class="post-count">249字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -374,7 +374,318 @@
 
           
         
-        <a href="/2021/04/22/%E9%97%AE%E9%A2%98-hexo-%E7%9B%B8%E5%86%8C%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        <a href="/2021/04/22/MacOs-Github-Ssh%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2021-04-22T14:00:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-22</time>
+</a>
+<!-- <span id="busuanzi_container_page_pv">  
+	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
+</span> -->
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1. 列出已存在的SSH Key</strong><br><code>ls -al ~/.ssh</code><br>如下所示，我的已有id_rsa.pub文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">total 16</span><br><span class="line">drwx------   4 root  wheel   128  4 21 15:46 .</span><br><span class="line">drwxr-x---  16 root  wheel   512  4 22 20:53 ..</span><br><span class="line">-rw-------   1 root  wheel  2602  4 21 15:46 id_rsa</span><br><span class="line">-rw-r--r--   1 root  wheel   570  4 21 15:46 id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p><strong>2. 生成密钥</strong><br><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code><br>如下所示,我选择覆盖 <code>Overwrite (y/n)? y</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;var&#x2F;root&#x2F;.ssh&#x2F;id_rsa): </span><br><span class="line">&#x2F;var&#x2F;root&#x2F;.ssh&#x2F;id_rsa already exists.</span><br><span class="line">Overwrite (y&#x2F;n)? y</span><br><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br><span class="line">Your identification has been saved in &#x2F;var&#x2F;root&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;var&#x2F;root&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:******B&#x2F;dQCl**********w7I4RfRVL******&#x2F;ssK8w ******@**.com</span><br></pre></td></tr></table></figure>
+<p><strong>3. 查找SSH Key</strong><br><code>vi /var/root/.ssh/id_rsa.pub </code><br>将里面的内容复制下来<br><strong>4. 将SSH Key添加到Github中</strong><br>打开 <a target="_blank" rel="noopener" href="https://github.com/settings/ssh">https://github.com/settings/ssh</a> 将这个key添加到github网站<br><strong>5. 测试</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sh-3.2# ssh -T git@github.com</span><br><span class="line">Hi *****! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/22/MacOs-Github-Ssh%E9%85%8D%E7%BD%AE/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MacOs-权限问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/22/MacOs-%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/">MacOs-权限问题</a>
+    </h1>
+  
+
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">83字</span>
+      </span>
+    </span>
+    &nbsp; | &nbsp;
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
+<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
+</div>
+
+
+          
+        
+        <a href="/2021/04/22/MacOs-%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2021-04-22T11:35:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-22</time>
+</a>
+<!-- <span id="busuanzi_container_page_pv">  
+	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
+</span> -->
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="以下是我在使用Mac遇到的一些权限问题"><a href="#以下是我在使用Mac遇到的一些权限问题" class="headerlink" title="以下是我在使用Mac遇到的一些权限问题"></a>以下是我在使用Mac遇到的一些权限问题</h2><p><strong>1. mac vscode 每次修改文件时提示没有权限问题</strong></p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/22/MacOs-%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MacOs-Shell脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/22/MacOs-Shell%E8%84%9A%E6%9C%AC/">MacOs-Shell脚本</a>
+    </h1>
+  
+
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">63字</span>
+      </span>
+    </span>
+    &nbsp; | &nbsp;
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
+<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
+</div>
+
+
+          
+        
+        <a href="/2021/04/22/MacOs-Shell%E8%84%9A%E6%9C%AC/" class="archive-article-date">
+  	<time datetime="2021-04-22T11:25:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-22</time>
+</a>
+<!-- <span id="busuanzi_container_page_pv">  
+	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
+</span> -->
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-运行问题"><a href="#1-运行问题" class="headerlink" title="1.运行问题"></a>1.运行问题</h2><p>shell脚本例如：test.sh<br>打开终端 切换到脚本所在目录下<br>执行方法：<br>1.输入命令<code>./test.sh</code><br>2.直接拖入test.sh入终端</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/22/MacOs-Shell%E8%84%9A%E6%9C%AC/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-问题-Hexo-yilia主题-相册问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/22/%E9%97%AE%E9%A2%98-Hexo-yilia%E4%B8%BB%E9%A2%98-%E7%9B%B8%E5%86%8C%E9%97%AE%E9%A2%98/">问题-Hexo-yilia主题-相册问题</a>
+    </h1>
+  
+
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">65字</span>
+      </span>
+    </span>
+    &nbsp; | &nbsp;
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
+<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
+</div>
+
+
+          
+        
+        <a href="/2021/04/22/%E9%97%AE%E9%A2%98-Hexo-yilia%E4%B8%BB%E9%A2%98-%E7%9B%B8%E5%86%8C%E9%97%AE%E9%A2%98/" class="archive-article-date">
   	<time datetime="2021-04-22T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-22</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
@@ -388,7 +699,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <span id="more"></span>
-<h3 id="使用tools-py工具将未裁剪只压缩的图片上传到github后只能看到压缩后的图片（待解决…）"><a href="#使用tools-py工具将未裁剪只压缩的图片上传到github后只能看到压缩后的图片（待解决…）" class="headerlink" title="使用tools.py工具将未裁剪只压缩的图片上传到github后只能看到压缩后的图片（待解决…）"></a>使用tools.py工具将未裁剪只压缩的图片上传到github后只能看到压缩后的图片（待解决…）</h3><h3 id="图片点开后，图片关闭按钮的样式有问题（待解决…）"><a href="#图片点开后，图片关闭按钮的样式有问题（待解决…）" class="headerlink" title="图片点开后，图片关闭按钮的样式有问题（待解决…）"></a>图片点开后，图片关闭按钮的样式有问题（待解决…）</h3>
+
+<p><strong>根据 <a target="_blank" rel="noopener" href="https://cungudafa.blog.csdn.net/article/details/104378416?utm_medium=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-7.control&dist_request_id=1332024.7936.16189865500844023&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-7.control">Github+Hexo博客增添相册功能</a></strong></p>
+<p><strong>使用tools.py工具将未裁剪只压缩的图片上传到github后只能看到压缩后的图片（待解决…）</strong></p>
+<p><strong>图片点开后，图片关闭按钮的样式有问题（待解决…）</strong></p>
+
       
 
       
@@ -411,7 +726,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/22/%E9%97%AE%E9%A2%98-hexo-%E7%9B%B8%E5%86%8C%E9%97%AE%E9%A2%98/">阅读全文 >></a>
+          <a class="article-more-a" href="/2021/04/22/%E9%97%AE%E9%A2%98-Hexo-yilia%E4%B8%BB%E9%A2%98-%E7%9B%B8%E5%86%8C%E9%97%AE%E9%A2%98/">阅读全文 >></a>
         </p>
       
 
@@ -441,14 +756,14 @@
 
 
   
-    <article id="post-笔记-hexo-一些坑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-笔记-Hexo-一些坑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/21/%E7%AC%94%E8%AE%B0-hexo-%E4%B8%80%E4%BA%9B%E5%9D%91/">笔记-hexo-一些坑</a>
+      <a class="article-title" href="/2021/04/21/%E7%AC%94%E8%AE%B0-Hexo-%E4%B8%80%E4%BA%9B%E5%9D%91/">笔记-Hexo-一些坑</a>
     </h1>
   
 
@@ -458,7 +773,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">181字</span>
+        <span class="post-count">205字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -476,7 +791,7 @@
 
           
         
-        <a href="/2021/04/21/%E7%AC%94%E8%AE%B0-hexo-%E4%B8%80%E4%BA%9B%E5%9D%91/" class="archive-article-date">
+        <a href="/2021/04/21/%E7%AC%94%E8%AE%B0-Hexo-%E4%B8%80%E4%BA%9B%E5%9D%91/" class="archive-article-date">
   	<time datetime="2021-04-21T14:55:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
@@ -490,7 +805,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p> <a target="_blank" rel="noopener" href="https://cungudafa.blog.csdn.net/article/details/104378416?utm_medium=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-7.control&dist_request_id=1332024.7936.16189865500844023&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-7.control">Github+Hexo博客增添相册功能</a> 路径设置问题</p>
-<p>1.在index.md 中</p>
+<p><strong>1.在index.md 中</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;instagram itemscope&quot;&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;githubcomzfl837244202blog_photos&#x2F;master&#x2F;photos&quot; target&#x3D;&quot;_blank&quot;class&#x3D;&quot;open-ins&quot;&gt;图片正在加载中…&lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
         
       
 
@@ -514,7 +830,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/21/%E7%AC%94%E8%AE%B0-hexo-%E4%B8%80%E4%BA%9B%E5%9D%91/">阅读全文 >></a>
+          <a class="article-more-a" href="/2021/04/21/%E7%AC%94%E8%AE%B0-Hexo-%E4%B8%80%E4%BA%9B%E5%9D%91/">阅读全文 >></a>
         </p>
       
 
@@ -544,116 +860,14 @@
 
 
   
-    <article id="post-笔记-JAVA编程思想" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Game" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/21/%E7%AC%94%E8%AE%B0-JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/">笔记-JAVA编程思想</a>
-    </h1>
-  
-
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">6字</span>
-      </span>
-    </span>
-    &nbsp; | &nbsp;
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
-<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
-</div>
-
-
-          
-        
-        <a href="/2021/04/21/%E7%AC%94%E8%AE%B0-JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/" class="archive-article-date">
-  	<time datetime="2021-04-21T03:52:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-<!-- <span id="busuanzi_container_page_pv">  
-	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
-</span> -->
-
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a target="_blank" rel="noopener" href="https://lingcoder.github.io/OnJava8/#/sidebar">https://lingcoder.github.io/OnJava8/#/sidebar</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/21/%E7%AC%94%E8%AE%B0-JAVA%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-game" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/21/game/">Game</a>
+      <a class="article-title" href="/2021/04/21/Game/">Game</a>
     </h1>
   
 
@@ -681,7 +895,7 @@
 
           
         
-        <a href="/2021/04/21/game/" class="archive-article-date">
+        <a href="/2021/04/21/Game/" class="archive-article-date">
   	<time datetime="2021-04-21T02:22:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
@@ -718,7 +932,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/21/game/">阅读全文 >></a>
+          <a class="article-more-a" href="/2021/04/21/Game/">阅读全文 >></a>
         </p>
       
 
@@ -748,14 +962,14 @@
 
 
   
-    <article id="post-macos-postgresql及pgadmin4安装方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MacOs-Postgresql及pgadmin4安装方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/20/macos-postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">MacOs-Postgresql及Pgadmin4安装方法</a>
+      <a class="article-title" href="/2021/04/20/MacOs-Postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">MacOs-Postgresql及Pgadmin4安装方法</a>
     </h1>
   
 
@@ -765,7 +979,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">242字</span>
+        <span class="post-count">252字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -783,7 +997,7 @@
 
           
         
-        <a href="/2021/04/20/macos-postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="archive-article-date">
+        <a href="/2021/04/20/MacOs-Postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="archive-article-date">
   	<time datetime="2021-04-20T13:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
@@ -796,7 +1010,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-安装postgresql以及pgadmin4"><a href="#1-安装postgresql以及pgadmin4" class="headerlink" title="1.安装postgresql以及pgadmin4"></a>1.安装postgresql以及pgadmin4</h2><p>访达文件夹搜索 shift+command+g<br>brew目录  /otp/homebrew<br>终端 brew安装postgresql：brew install postgresql</p>
+        <h2 id="1-安装postgresql以及pgadmin4"><a href="#1-安装postgresql以及pgadmin4" class="headerlink" title="1.安装postgresql以及pgadmin4"></a>1.安装postgresql以及pgadmin4</h2><p>访达文件夹搜索 shift+command+g<br>brew目录  /otp/homebrew<br>终端 brew安装postgresql：<code>brew install postgresql</code></p>
         
       
 
@@ -820,7 +1034,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/20/macos-postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">阅读全文 >></a>
+          <a class="article-more-a" href="/2021/04/20/MacOs-Postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">阅读全文 >></a>
         </p>
       
 
@@ -850,14 +1064,14 @@
 
 
   
-    <article id="post-macos-tomcat安装方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-MacOs-Tomcat安装方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/20/macos-tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">MacOs-Tomcat安装方法</a>
+      <a class="article-title" href="/2021/04/20/MacOs-Tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">MacOs-Tomcat安装方法</a>
     </h1>
   
 
@@ -867,7 +1081,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">351字</span>
+        <span class="post-count">457字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -885,7 +1099,7 @@
 
           
         
-        <a href="/2021/04/20/macos-tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="archive-article-date">
+        <a href="/2021/04/20/MacOs-Tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="archive-article-date">
   	<time datetime="2021-04-20T12:22:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
@@ -898,7 +1112,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-安装tomcat"><a href="#1-安装tomcat" class="headerlink" title="1.安装tomcat"></a>1.安装tomcat</h2><p>需要java环境<br>下载tomcat 解压到 /Users/zfl/java/Tomcat不用安装<br>在终端创建一个.bash_profile文件：  touch .bash_profile<br>编辑文件： vi .bash_profile</p>
+        <h2 id="1-安装tomcat"><a href="#1-安装tomcat" class="headerlink" title="1.安装tomcat"></a>1.安装tomcat</h2><p>需要java环境<br>下载tomcat 解压到 /Users/zfl/java/Tomcat 不用安装(与后面修改环境变量目录对应)<br>在终端创建一个.bash_profile文件：  <code>touch .bash_profile</code><br>编辑文件： <code>vi .bash_profile</code></p>
         
       
 
@@ -922,7 +1136,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/20/macos-tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">阅读全文 >></a>
+          <a class="article-more-a" href="/2021/04/20/MacOs-Tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">阅读全文 >></a>
         </p>
       
 
@@ -969,7 +1183,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">20字</span>
+        <span class="post-count">24字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -1001,7 +1215,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <span id="more"></span>
-<p>QQ:837244202<br>Mail:<a href="mailto:&#x38;&#51;&#55;&#x32;&#52;&#52;&#x32;&#x30;&#x32;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;">&#x38;&#51;&#55;&#x32;&#52;&#52;&#x32;&#x30;&#x32;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;</a><br>WeChat:zfl837244202<br><img src="https://i.loli.net/2021/04/20/EN5gW7j1XUzAlLf.jpg" alt="我是图片"></p>
+<p>QQ:837244202<br>Mail:<a href="mailto:&#56;&#x33;&#55;&#x32;&#x34;&#52;&#x32;&#x30;&#50;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;">&#56;&#x33;&#55;&#x32;&#x34;&#52;&#x32;&#x30;&#50;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;</a><br>WeChat:zfl837244202<br><a target="_blank" rel="noopener" href="https://i.loli.net/2021/04/20/EN5gW7j1XUzAlLf.jpg">我是图片</a></p>
 
       
 
@@ -1055,14 +1269,14 @@
 
 
   
-    <article id="post-hexo-加点特效" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Hexo-加点特效" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/20/hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/">Hexo 加点特效</a>
+      <a class="article-title" href="/2021/04/20/Hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/">Hexo 加点特效</a>
     </h1>
   
 
@@ -1072,7 +1286,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">72字</span>
+        <span class="post-count">76字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -1090,7 +1304,7 @@
 
           
         
-        <a href="/2021/04/20/hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/" class="archive-article-date">
+        <a href="/2021/04/20/Hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/" class="archive-article-date">
   	<time datetime="2021-04-20T06:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
@@ -1103,112 +1317,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Hexo-博客优化之博客美化系列（持续更新）"><a href="#Hexo-博客优化之博客美化系列（持续更新）" class="headerlink" title="Hexo 博客优化之博客美化系列（持续更新）"></a>Hexo 博客优化之博客美化系列（持续更新）</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/85420403">点我跳转</a></p>
-<h2 id="Hexo-博客优化之实用功能添加系列（持续更新）"><a href="#Hexo-博客优化之实用功能添加系列（持续更新）" class="headerlink" title="Hexo 博客优化之实用功能添加系列（持续更新）"></a>Hexo 博客优化之实用功能添加系列（持续更新）</h2><p><a target="_blank" rel="noopener" href="https://itrhx.blog.csdn.net/article/details/85010191?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&dist_request_id=1331996.9100.16188964458790311&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">点我跳转</a></p>
-<h2 id="Github-Hexo博客增添相册功能"><a href="#Github-Hexo博客增添相册功能" class="headerlink" title="Github+Hexo博客增添相册功能"></a>Github+Hexo博客增添相册功能</h2><p><a target="_blank" rel="noopener" href="https://cungudafa.blog.csdn.net/article/details/104378416?utm_medium=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-7.control&dist_request_id=1332024.7936.16189865500844023&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~OPENSEARCH~default-7.control">点我跳转</a></p>
-<h2 id="hexo下next主题实现鼠标移动特效"><a href="#hexo下next主题实现鼠标移动特效" class="headerlink" title="hexo下next主题实现鼠标移动特效"></a>hexo下next主题实现鼠标移动特效</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yu826103408/article/details/106617947">点我跳转</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/20/hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo-使用方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/19/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">Hexo 使用方法</a>
-    </h1>
-  
-
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">304字</span>
-      </span>
-    </span>
-    &nbsp; | &nbsp;
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
-<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
-</div>
-
-
-          
-        
-        <a href="/2021/04/19/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2021-04-19T10:52:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-19</time>
-</a>
-<!-- <span id="busuanzi_container_page_pv">  
-	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
-</span> -->
-
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-下载并安装-node"><a href="#1-下载并安装-node" class="headerlink" title="1.下载并安装 node"></a>1.下载并安装 node</h2><p><a target="_blank" rel="noopener" href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
+        <h2 id="1-Hexo-博客优化之博客美化系列（持续更新）"><a href="#1-Hexo-博客优化之博客美化系列（持续更新）" class="headerlink" title="1.Hexo 博客优化之博客美化系列（持续更新）"></a>1.Hexo 博客优化之博客美化系列（持续更新）</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/85420403">点我跳转</a></p>
+<h2 id="2-Hexo-博客优化之实用功能添加系列（持续更新）"><a href="#2-Hexo-博客优化之实用功能添加系列（持续更新）" class="headerlink" title="2.Hexo 博客优化之实用功能添加系列（持续更新）"></a>2.Hexo 博客优化之实用功能添加系列（持续更新）</h2><p><a target="_blank" rel="noopener" href="https://itrhx.blog.csdn.net/article/details/85010191?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&dist_request_id=1331996.9100.16188964458790311&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">点我跳转</a></p>
         
       
 
@@ -1232,7 +1342,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/19/hexo-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">阅读全文 >></a>
+          <a class="article-more-a" href="/2021/04/20/Hexo-%E5%8A%A0%E7%82%B9%E7%89%B9%E6%95%88/">阅读全文 >></a>
         </p>
       
 
@@ -1262,97 +1372,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">77字</span>
-      </span>
-    </span>
-    &nbsp; | &nbsp;
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
-<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
-</div>
-
-
-          
-        
-        <a href="/2021/04/19/hello-world/" class="archive-article-date">
-  	<time datetime="2021-04-19T07:24:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-19</time>
-</a>
-<!-- <span id="busuanzi_container_page_pv">  
-	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
-</span> -->
-
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/19/hello-world/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+    </nav>
   
 
 
@@ -1376,7 +1399,7 @@
 			</span> | -->
 
 			<i class="fas fa-chart-area"></i>
-			<span class="post-count">字数统计 1.3k</span> |
+			<span class="post-count">字数统计 1.9k</span> |
 
 			<!-- # 总访问量 -->
 			<span id="busuanzi_container_site_pv">    
@@ -1491,11 +1514,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">psql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color3">问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1503,11 +1534,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">macos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">个人</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">问题</a>
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
             
             <div class="clearfix"></div>

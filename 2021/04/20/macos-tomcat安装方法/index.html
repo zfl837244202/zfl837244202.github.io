@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>MacOs-Tomcat安装方法 | 良辰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.安装tomcat需要java环境下载tomcat 解压到 &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat不用安装在终端创建一个.bash_profile文件：  touch .bash_profile编辑文件： vi .bash_profile">
+  <meta name="description" content="1.安装tomcat需要java环境下载tomcat 解压到 &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat 不用安装(与后面修改环境变量目录对应)在终端创建一个.bash_profile文件：  touch .bash_profile编辑文件： vi .bash_profile">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MacOs-Tomcat安装方法">
-<meta property="og:url" content="http://example.com/2021/04/20/macos-tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:url" content="http://example.com/2021/04/20/MacOs-Tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="良辰">
-<meta property="og:description" content="1.安装tomcat需要java环境下载tomcat 解压到 &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat不用安装在终端创建一个.bash_profile文件：  touch .bash_profile编辑文件： vi .bash_profile">
+<meta property="og:description" content="1.安装tomcat需要java环境下载tomcat 解压到 &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat 不用安装(与后面修改环境变量目录对应)在终端创建一个.bash_profile文件：  touch .bash_profile编辑文件： vi .bash_profile">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-04-20T12:22:03.000Z">
-<meta property="article:modified_time" content="2021-04-22T03:10:03.162Z">
+<meta property="article:modified_time" content="2021-04-22T12:18:02.629Z">
 <meta property="article:author" content="by zfl">
 <meta property="article:tag" content="tomcat">
 <meta name="twitter:card" content="summary">
@@ -72,7 +72,7 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
-        <li><p> TOTAL: 10</p></li>
+        <li><p> TOTAL: 12</p></li>
 			</ul> 
 		</nav>
     
@@ -189,7 +189,7 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
-        <li><p> TOTAL: 10</p></li>
+        <li><p> TOTAL: 12</p></li>
 			</ul> 
 		</nav>
     
@@ -342,7 +342,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-macos-tomcat安装方法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MacOs-Tomcat安装方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -359,7 +359,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">351字</span>
+        <span class="post-count">457字</span>
       </span>
     </span>
     &nbsp; | &nbsp;
@@ -377,7 +377,7 @@
 
           
         
-        <a href="/2021/04/20/macos-tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="archive-article-date">
+        <a href="/2021/04/20/MacOs-Tomcat%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="archive-article-date">
   	<time datetime="2021-04-20T12:22:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
@@ -390,42 +390,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-安装tomcat"><a href="#1-安装tomcat" class="headerlink" title="1.安装tomcat"></a>1.安装tomcat</h2><p>需要java环境<br>下载tomcat 解压到 /Users/zfl/java/Tomcat不用安装<br>在终端创建一个.bash_profile文件：  touch .bash_profile<br>编辑文件： vi .bash_profile</p>
+        <h2 id="1-安装tomcat"><a href="#1-安装tomcat" class="headerlink" title="1.安装tomcat"></a>1.安装tomcat</h2><p>需要java环境<br>下载tomcat 解压到 /Users/zfl/java/Tomcat 不用安装(与后面修改环境变量目录对应)<br>在终端创建一个.bash_profile文件：  <code>touch .bash_profile</code><br>编辑文件： <code>vi .bash_profile</code></p>
 <span id="more"></span>
-<h2 id="2-配置环境变量："><a href="#2-配置环境变量：" class="headerlink" title="2.配置环境变量："></a>2.配置环境变量：</h2><hr>
-<pre><code>JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home
-PATH=$JAVA_HOME/bin:$PATH:.
-CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
-export JAVA_HOME
-export PATH
-export CLASSPATH
-export PATH=$PATH:/Users/zfl/java/Tomcat/apache-tomcat-8.5.64/bin
-</code></pre>
-<hr>
-<p>对应java路径和tomcat路径<br>激活文件:source .bash_profile</p>
-<h2 id="3-启动tomcat"><a href="#3-启动tomcat" class="headerlink" title="3.启动tomcat"></a>3.启动tomcat</h2><h2 id="启动服务-startup-sh"><a href="#启动服务-startup-sh" class="headerlink" title="启动服务:startup.sh   "></a>启动服务:startup.sh   </h2><pre><code>zfl@localhost ~ % startup.sh                    
-Using CATALINA_BASE:   /Users/zfl/java/Tomcat/apache-tomcat-8.5.64
-Using CATALINA_HOME:   /Users/zfl/java/Tomcat/apache-tomcat-8.5.64
-Using CATALINA_TMPDIR: /Users/zfl/java/Tomcat/apache-tomcat-8.5.64/temp
-Using JRE_HOME:        /Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home
-Using CLASSPATH:       /Users/zfl/java/Tomcat/apache-tomcat-8.5.64/bin/bootstrap.jar:/Users/zfl/java/Tomcat/apache-tomcat-8.5.64/bin/tomcat-juli.jar
-Using CATALINA_OPTS:   
-Tomcat started.
-</code></pre>
-<hr>
-<h2 id="关闭服务-shutdown-sh"><a href="#关闭服务-shutdown-sh" class="headerlink" title="关闭服务:shutdown.sh"></a>关闭服务:shutdown.sh</h2><pre><code>zfl@localhost ~ % shutdown.sh
-Using CATALINA_BASE:   /Users/zfl/java/Tomcat/apache-tomcat-8.5.64
-Using CATALINA_HOME:   /Users/zfl/java/Tomcat/apache-tomcat-8.5.64
-Using CATALINA_TMPDIR: /Users/zfl/java/Tomcat/apache-tomcat-8.5.64/temp
-Using JRE_HOME:        /Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home
-Using CLASSPATH:       /Users/zfl/java/Tomcat/apache-tomcat-8.5.64/bin/bootstrap.jar:/Users/zfl/java/Tomcat/apache-tomcat-8.5.64/bin/tomcat-juli.jar
-Using CATALINA_OPTS:   
-NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
-zfl@localhost ~ % 
-</code></pre>
-<hr>
+<h2 id="2-配置环境变量："><a href="#2-配置环境变量：" class="headerlink" title="2.配置环境变量："></a>2.配置环境变量：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME&#x3D;&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;jdk-15.0.2.jdk&#x2F;Contents&#x2F;Home</span><br><span class="line">PATH&#x3D;$JAVA_HOME&#x2F;bin:$PATH:.</span><br><span class="line">CLASSPATH&#x3D;$JAVA_HOME&#x2F;lib&#x2F;tools.jar:$JAVA_HOME&#x2F;lib&#x2F;dt.jar:.</span><br><span class="line">export JAVA_HOME</span><br><span class="line">export PATH</span><br><span class="line">export CLASSPATH</span><br><span class="line">export PATH&#x3D;$PATH:&#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64&#x2F;bin</span><br></pre></td></tr></table></figure>
+<p>对应java路径和tomcat路径<br>激活文件:<code>source .bash_profile</code></p>
+<h2 id="3-启动tomcat"><a href="#3-启动tomcat" class="headerlink" title="3.启动tomcat"></a>3.启动tomcat</h2><p>启动服务:<code>startup.sh </code>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">zfl@localhost ~ % startup.sh                    </span><br><span class="line">Using CATALINA_BASE:   &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64</span><br><span class="line">Using CATALINA_HOME:   &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64</span><br><span class="line">Using CATALINA_TMPDIR: &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64&#x2F;temp</span><br><span class="line">Using JRE_HOME:        &#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;jdk-15.0.2.jdk&#x2F;Contents&#x2F;Home</span><br><span class="line">Using CLASSPATH:       &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64&#x2F;bin&#x2F;bootstrap.jar:&#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64&#x2F;bin&#x2F;tomcat-juli.jar</span><br><span class="line">Using CATALINA_OPTS:   </span><br><span class="line">Tomcat started.</span><br></pre></td></tr></table></figure>
+<p>关闭服务:<code>shutdown.sh</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">zfl@localhost ~ % shutdown.sh</span><br><span class="line">Using CATALINA_BASE:   &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64</span><br><span class="line">Using CATALINA_HOME:   &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64</span><br><span class="line">Using CATALINA_TMPDIR: &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64&#x2F;temp</span><br><span class="line">Using JRE_HOME:        &#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;jdk-15.0.2.jdk&#x2F;Contents&#x2F;Home</span><br><span class="line">Using CLASSPATH:       &#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64&#x2F;bin&#x2F;bootstrap.jar:&#x2F;Users&#x2F;zfl&#x2F;java&#x2F;Tomcat&#x2F;apache-tomcat-8.5.64&#x2F;bin&#x2F;tomcat-juli.jar</span><br><span class="line">Using CATALINA_OPTS:   </span><br><span class="line">NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens&#x3D;java.base&#x2F;java.lang&#x3D;ALL-UNNAMED --add-opens&#x3D;java.base&#x2F;java.io&#x3D;ALL-UNNAMED --add-opens&#x3D;java.base&#x2F;java.util&#x3D;ALL-UNNAMED --add-opens&#x3D;java.base&#x2F;java.util.concurrent&#x3D;ALL-UNNAMED --add-opens&#x3D;java.rmi&#x2F;sun.rmi.transport&#x3D;ALL-UNNAMED</span><br><span class="line">zfl@localhost ~ % </span><br></pre></td></tr></table></figure>
 <p>项目放在：/Users/zfl/java/Tomcat/apache-tomcat-8.5.64/webapps/ROOT/test  </p>
-<h2 id="4-运行：Localhost-8080-test-文件名"><a href="#4-运行：Localhost-8080-test-文件名" class="headerlink" title="4.运行：Localhost:8080/test/文件名"></a>4.运行：Localhost:8080/test/文件名</h2>
+<h2 id="4-运行：Localhost-8080-test-文件名"><a href="#4-运行：Localhost-8080-test-文件名" class="headerlink" title="4.运行：Localhost:8080/test/文件名"></a>4.运行：<code>Localhost:8080/test/文件名</code></h2>
       
 
       
@@ -457,7 +431,7 @@ zfl@localhost ~ %
   
 <nav id="article-nav">
   
-    <a href="/2021/04/20/macos-postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/20/MacOs-Postgresql%E5%8F%8Apgadmin4%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -495,7 +469,7 @@ zfl@localhost ~ %
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85tomcat"><span class="toc-number">1.</span> <span class="toc-text">1.安装tomcat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">2.配置环境变量：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8tomcat"><span class="toc-number">3.</span> <span class="toc-text">3.启动tomcat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1-startup-sh"><span class="toc-number">4.</span> <span class="toc-text">启动服务:startup.sh   </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%9C%8D%E5%8A%A1-shutdown-sh"><span class="toc-number">5.</span> <span class="toc-text">关闭服务:shutdown.sh</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%BF%90%E8%A1%8C%EF%BC%9ALocalhost-8080-test-%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-number">6.</span> <span class="toc-text">4.运行：Localhost:8080&#x2F;test&#x2F;文件名</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85tomcat"><span class="toc-number">1.</span> <span class="toc-text">1.安装tomcat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">2.配置环境变量：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8tomcat"><span class="toc-number">3.</span> <span class="toc-text">3.启动tomcat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%BF%90%E8%A1%8C%EF%BC%9ALocalhost-8080-test-%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-number">4.</span> <span class="toc-text">4.运行：Localhost:8080&#x2F;test&#x2F;文件名</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -557,7 +531,7 @@ zfl@localhost ~ %
 			</span> | -->
 
 			<i class="fas fa-chart-area"></i>
-			<span class="post-count">字数统计 1.3k</span> |
+			<span class="post-count">字数统计 1.9k</span> |
 
 			<!-- # 总访问量 -->
 			<span id="busuanzi_container_site_pv">    
@@ -672,11 +646,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">psql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color3">问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -684,11 +666,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">macos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">个人</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">问题</a>
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
             
             <div class="clearfix"></div>
