@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 个人 | 良辰</title>
+  <title>笔记-Python-Flask | 良辰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="良辰">
-<meta property="og:url" content="http://example.com/tags/%E4%B8%AA%E4%BA%BA/index.html">
+  <meta name="description" content="在pycharm中创建一个flask项目，会自动安装flask插件 查看flask版本flask --version">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-Python-Flask">
+<meta property="og:url" content="http://example.com/2021/05/12/%E7%AC%94%E8%AE%B0-Python-Flask/index.html">
 <meta property="og:site_name" content="良辰">
+<meta property="og:description" content="在pycharm中创建一个flask项目，会自动安装flask插件 查看flask版本flask --version">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-05-12T08:00:25.000Z">
+<meta property="article:modified_time" content="2021-05-12T09:14:59.128Z">
 <meta property="article:author" content="by zfl">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="flask">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="良辰" type="application/atom+xml">
@@ -349,108 +355,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-笔记-Python-Flask" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      笔记-Python-Flask
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/24/%E5%8A%A8%E6%BC%AB%E5%9B%BE%E7%89%87/" class="archive-article-date">
-  	<time datetime="2021-04-24T12:27:39.934Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-24</time>
+
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">210字</span>
+      </span>
+    </span>
+    &nbsp; | &nbsp;
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+     <!-- 使用 pv 记录方式，每访问一次，记录一次 -->
+<!-- <span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span> -->
+</div>
+
+
+          
+        
+        <a href="/2021/05/12/%E7%AC%94%E8%AE%B0-Python-Flask/" class="archive-article-date">
+  	<time datetime="2021-05-12T08:00:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
 </a>
 <!-- <span id="busuanzi_container_page_pv">  
 	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
 </span> -->
 
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/24/%E5%8A%A8%E6%BC%AB%E5%9B%BE%E7%89%87/">动漫图片</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在pycharm中创建一个flask项目，会自动安装flask插件</p>
+<p>查看flask版本<code>flask --version</code></p>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<h5 id="提交表单"><a href="#提交表单" class="headerlink" title="提交表单"></a>提交表单</h5><p>在app.py中添加如下</p>
+<p>登陆页面</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 登陆</span></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/login&#x27;</span></span>)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    &lt;form action=&#x27;/show&#x27;&gt; </span></span><br><span class="line"><span class="string">        UserName:&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;/br&gt;</span></span><br><span class="line"><span class="string">        PassWord:&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;&lt;/br&gt;</span></span><br><span class="line"><span class="string">        &lt;input type=&quot;submit&quot; value=&#x27;提交&#x27;&gt;</span></span><br><span class="line"><span class="string">        &lt;input type=&quot;reset&quot; value=&#x27;重置&#x27;&gt;</span></span><br><span class="line"><span class="string">    &lt;/form&gt;</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示页面</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示页面</span></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/show&#x27;</span></span>)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show</span>():</span></span><br><span class="line">    username = request.values.get(<span class="string">&quot;username&quot;</span>)</span><br><span class="line">    password = request.values.get(<span class="string">&quot;password&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&quot;用户名<span class="subst">&#123;username&#125;</span>,密码<span class="subst">&#123;password&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="创建静态网页"><a href="#创建静态网页" class="headerlink" title="创建静态网页"></a>创建静态网页</h5><p>在app.py中添加如下</p>
+<p>导入渲染<code>from flask import render_template</code></p>
+<p>新建test路由指向templates/index.html</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/test&quot;</span></span>)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>():</span></span><br><span class="line">    <span class="keyword">return</span> render_template(<span class="string">&quot;index.html&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">个人</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/20/%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2021-04-20T10:53:17.327Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
-</a>
-<!-- <span id="busuanzi_container_page_pv">  
-	本文总阅读量 <span id="busuanzi_value_page_pv"></span>次
-</span> -->
-
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/20/%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/">评论留下，交个朋友呀！</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">个人</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">flask</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2021/05/12/%E7%AC%94%E8%AE%B0-Python-%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">笔记-Python-学生管理系统连接MySQL数据库</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95"><span class="toc-number">1.</span> <span class="toc-text">提交表单</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5"><span class="toc-number">2.</span> <span class="toc-text">创建静态网页</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+      <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81MzMwOC8yOTc4Mg==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+      
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -514,9 +587,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
